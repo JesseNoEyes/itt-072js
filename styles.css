@@ -1,24 +1,42 @@
 * {
-  font-family: 'montserrat';
+  font-family: "montserrat";
 }
 
 body {
   background-color: #e7d778;
 }
 
-#darkmode-div {
+#logo {
   position: absolute;
-  right: 20px;
-  top: 20px;
+  left: 5%;
+  width: 90%;
+  opacity: 25%;
+}
+
+#title {
+  font-size: 80pt;
+  text-align: center;
+  margin: 0;
+  text-shadow: 5px 5px 5px rgb(158, 155, 78);
+}
+
+#darkmode-div {
   display: flex;
-  gap: 12px;
-  font-size: 30pt;
+  width: 50%;
+  margin: auto;
+  justify-content: center;
+  gap: 10px;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 #darkmode-div input {
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
+}
+
+#darkmode-div p {
+  font-size: 20pt;
 }
 
 .container {
@@ -26,38 +44,31 @@ body {
   margin: auto;
 }
 
-#title {
-  font-size: 80pt;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  text-shadow: 5px 5px 5px rgb(158, 155, 78);
+.habits {
+  display: block;
+  margin: auto;
+  text-align: center;
+  width: 90%;
 }
 
 .pledge {
   position: relative;
   border: 1px solid #d9ca71;
-  background-color: rgba(255, 255, 255, .5);
-  width: 95%;
+  background-color: rgba(255, 255, 255, 0.5);
   height: 200px;
   border-radius: 10px;
   transition: background-color 0.5s linear;
   display: flex;
   flex-direction: column;
+  margin-top: 10px;
   gap: 0.3rem;
   align-items: center;
   justify-content: center;
 }
 
 .pledge:hover {
-  background-color: rgba(255, 255, 255, .75);
+  background-color: rgba(255, 255, 255, 0.75);
   transition: background-color 0.5s linear;
-}
-
-.habits {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  gap: 1rem;
 }
 
 .pledge h1 {
@@ -72,7 +83,7 @@ body {
   font-size: 24pt;
   margin: auto;
   width: 75%;
-  background-color: rgba(255, 255, 255, .5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 label {
@@ -154,11 +165,11 @@ label {
 
 .darkmode .pledge {
   border: 1px solid white;
-  background-color: rgba(10, 10, 10, .5);
+  background-color: rgba(10, 10, 10, 0.5);
 }
 
 .darkmode .pledge:hover {
-  background: rgba(10, 10, 10, .75);
+  background: rgba(10, 10, 10, 0.75);
 }
 
 .darkmode #habitForm button {
@@ -168,5 +179,57 @@ label {
 }
 
 .darkmode #habitForm {
-  background-color: rgba(10, 10, 10, .5);
+  background-color: rgba(10, 10, 10, 0.5);
+}
+
+@media (min-width: 760px) {
+  #darkmode-div {
+    position: absolute;
+    right: 20px;
+    top: 75px;
+    width: 260px;
+  }
+
+  #darkmode-div input {
+    width: 25px;
+    height: 25px;
+  }
+
+  #darkmode-div p {
+    font-size: 30pt;
+  }
+
+  #title {
+    font-size: 120pt;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  #logo {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    width: 240px;
+  }
+
+  .pledge {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pledge:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+    transition: background-color 0.5s linear;
+  }
+
+  .habits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 1rem;
+  }
 }

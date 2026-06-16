@@ -1,45 +1,48 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="styles.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>I Quit</title>
-    <script type="module" src="main.js" defer></script>
-  </head>
 
-  <body>
-    <div id='darkmode-div'>
-      <p>Darkmode</p>
-      <input type="checkbox" id="darkmode-check">
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I Quit</title>
+  <script type="module" src="main.js" defer></script>
+</head>
 
-    <div class="container">
-      <h1 id="title">I Quit</h1>
-      <div class="habits">
-        <div class="pledge" id="addHabit">
-          <h1>Add new habit</h1>
-        </div>
-      </div>
-      <div id="habitForm" style="display:none; border: 1px solid #aaa; padding: 1rem; margin-top: 1rem;">
-        <label>
-          Habit Name:
-          <input type="text" id="habitNameInput" placeholder="e.g. Quit sugar" />
-        </label>
-        <br />
-        <label>
-          Date:
-          <input type="date" id="habitDateInput" />
-        </label>
-        <br />
-        <label>
-          Last Time Indulged:
-          <input type="time" id="habitTimeInput" value="12:00" />
-        </label>
-        <br />
-        <button id="habitSubmit">Add Habit</button>
-        <button id="habitCancel">Cancel</button>
+<body>
+  <img id="logo" src="assets/oslash.png" alt="I Quit logo">
+  <h1 id="title">I Quit</h1>
+  <div id='darkmode-div'>
+    <p>Darkmode</p>
+    <input type="checkbox" id="darkmode-check">
+  </div>
+
+  <div class="container">
+    <div class="habits">
+      <div class="pledge" id="addHabit">
+        <h1>Add new habit</h1>
       </div>
     </div>
-  </body>
+    <div id="habitForm" style="display:none; border: 1px solid #aaa; padding: 1rem; margin-top: 1rem;">
+      <label>
+        Habit Name:
+        <input type="text" id="habitNameInput" placeholder="e.g. Quit sugar" />
+      </label>
+      <br />
+      <label>
+        Date:
+        <input type="date" id="habitDateInput" />
+      </label>
+      <br />
+      <label>
+        Last Time Indulged:
+        <input type="time" id="habitTimeInput" value="12:00" />
+      </label>
+      <br />
+      <button id="habitSubmit">Add Habit</button>
+      <button id="habitCancel">Cancel</button>
+    </div>
+  </div>
+</body>
+
 </html>

@@ -65,12 +65,12 @@ function displayHabit(habitName, startIso) {
   });
 
   closeBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
+    // e.stopPropagation();
     div.classList.remove("open");
   });
 
   resetBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
+    // e.stopPropagation();
     let nowIso = new Date().toISOString();
     p.dataset.start = nowIso;
 
@@ -82,7 +82,7 @@ function displayHabit(habitName, startIso) {
   });
 
   removeBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
+    // e.stopPropagation();
     habits = habits.filter(
       (h) => !(h.name === habitName && h.iso === startIso),
     );
@@ -156,7 +156,11 @@ habitCancel.addEventListener("click", () => {
 });
 
 habitSubmit.addEventListener("click", () => {
-  if (habitNameInput.value && habitDateInput.value && checkValidDate(habitDateInput.value, habitTimeInput.value)) {
+  if (
+    habitNameInput.value &&
+    habitDateInput.value &&
+    checkValidDate(habitDateInput.value, habitTimeInput.value)
+  ) {
     addHabit(
       habitNameInput.value.trim(),
       habitDateInput.value,
@@ -186,3 +190,4 @@ displayHabits();
 
 // update time display every second
 setInterval(updateDeltas, 1000);
+
