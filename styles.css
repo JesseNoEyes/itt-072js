@@ -1,5 +1,6 @@
 * {
   font-family: "montserrat";
+  box-sizing: border-box;
 }
 
 body {
@@ -33,6 +34,7 @@ body {
 #darkmode-div input {
   width: 40px;
   height: 40px;
+  z-index: 999;
 }
 
 #darkmode-div p {
